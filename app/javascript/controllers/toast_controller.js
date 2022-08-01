@@ -8,8 +8,8 @@ export default class extends Controller {
     )
   }
 
-  show(e) {
-    console.log(e.detail.content)
+  show({ detail: { content } }) {
+    this.toast._element.querySelector('.toast-body').innerText = content
     this.toast.show()
   }
 }
