@@ -91,6 +91,9 @@ GEM
       reline (>= 0.3.1)
     digest (3.1.0)
     erubi (1.10.0)
+    faker (2.22.0)
+      i18n (>= 1.8.11, < 2)
+    ffaker (2.21.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -218,6 +221,8 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  faker (~> 2.22)
+  ffaker (~> 2.21)
   jbuilder
   jsbundling-rails
   propshaft
@@ -233,7 +238,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.1p18
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.12
