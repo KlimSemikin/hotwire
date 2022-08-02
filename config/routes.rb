@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :folders
 
+  resources :notes, except: %i[show destroy]
+
   root 'images#index'
 end
