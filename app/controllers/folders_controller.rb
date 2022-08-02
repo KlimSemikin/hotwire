@@ -11,11 +11,8 @@ class FoldersController < ApplicationController
 
   def create
     @folder = Folder.new folder_params
-
     if @folder.save
-      respond_to do |format|
-        format.turbo_stream
-      end
+      # redirect_to folders_path
     else
       render :new
     end
