@@ -12,6 +12,7 @@ class FoldersController < ApplicationController
   def create
     @folder = Folder.new folder_params
     if @folder.save
+      flash.now[:success] = 'Folder created!'
       # redirect_to folders_path
     else
       render :new
@@ -22,17 +23,14 @@ class FoldersController < ApplicationController
 
   def destroy
     @folder.destroy
-
-    redirect_to folders_path, status: :see_other
+    flash.now[:success] = 'Folder deleted!'
   end
 
   def edit; end
 
   def update
     if @folder.update folder_params
-      respond_to do |format|
-        format.turbo_stream
-      end
+      # redirect_to folders_path
     else
       render :edit
     end
