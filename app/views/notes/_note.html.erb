@@ -1,0 +1,11 @@
+<%= turbo_frame_tag note do %>
+  <section class="mb-4">
+    <h2><%= note.title %></h2>
+
+    <p><%= note.description %></p>
+
+    <%= turbo_frame_tag note do %>
+      <%= link_to 'Edit', edit_note_path(note), class: 'btn btn-secondary' %>
+    <% end %>
+  </section>
+<% end %>

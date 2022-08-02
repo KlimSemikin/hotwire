@@ -1,0 +1,27 @@
+<%= turbo_frame_tag note do %>
+  <%= form_with model: note  do |f| %>
+    <%= render 'shared/errors', object: note %>
+
+    <div class="mb-3 row">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :title, for: dom_id(note, :title) %>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.text_field :title, id: dom_id(note, :title), class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :description, for: dom_id(note, :description) %>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.text_area :description, id: dom_id(note, :description), class: 'form-control' %>
+      </div>
+    </div>
+
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
