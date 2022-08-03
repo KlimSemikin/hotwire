@@ -189,7 +189,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sqlite3 (1.4.4)
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.4)
@@ -237,7 +236,6 @@ DEPENDENCIES
   rails (~> 7.0.3, >= 7.0.3.1)
   redis (~> 4.0)
   selenium-webdriver
-  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
