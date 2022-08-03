@@ -22,6 +22,18 @@
       </div>
     </div>
 
+    <% if note.new_record? %>
+      <div class="mb-3 row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :position, for: dom_id(note, :position) %>
+        </div>
+
+        <div class="col-sm-10">
+          <%= f.number_field :position, id: dom_id(note, :position), class: 'form-control', readonly: true %>
+        </div>
+      </div>
+    <% end %>
+
     <%= f.submit 'Submit', class: 'btn btn-primary' %>
   <% end %>
 <% end %>
