@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   resources :folders
 
-  resources :notes, except: %i[show destroy]
+  resources :notes, except: %i[show destroy] do
+    collection do
+      patch 'reorder'
+    end
+  end
 
   root 'images#index'
 end
